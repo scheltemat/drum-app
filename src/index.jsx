@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BaseLayout from './components/layout/BaseLayout';
 import Exercises from './components/Exercises';
 import PracticeSchedule from './components/PracticeSchedule';
+import ExerciseDetails from './components/ExerciseDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
 
           <Route path="/" element={<App />}/>
           <Route path="/exercises" element={<Exercises />}/>
+          <Route path="/exercises/:exerciseID" element={<ExerciseDetails />}/>
           <Route path="/practiceSchedule" element={<PracticeSchedule />}/>
 
         </Routes>

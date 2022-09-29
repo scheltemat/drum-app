@@ -3,8 +3,16 @@ import Button from 'react-bootstrap/Button';
 import PracticeSchedule from './PracticeSchedule'
 import beatData from '../assets/beatData'
 import fillData from '../assets/fillData'
+import {useNavigate} from 'react-router-dom'
 
 const Exercises = () => {
+
+  const navigate = useNavigate()
+  const handleClick = (id) => {
+    
+    // console.log(id)
+    navigate(`/exercises/${id}`)
+  }
 
   return (
     <>
@@ -27,14 +35,17 @@ const Exercises = () => {
             {beatData.map(beat =>{
 
               return ( 
-              <div className='row my-4'>
+
+              <div onClick={()=>handleClick(beat.id)} className='row my-4' key={beat.id}>
                 <div>
                   <h5>{beat.title}</h5>
                   <p>Difficulty: {beat.difficulty}</p>
                 </div>
+
                 <div className='mb-1'>
-                  <iframe key={beat.id} src={`https://flat.io/embed/${beat.embedSrc}?_l=true&sharingKey=34ed5ad07b12e688737a9fc3d87d4d20030ea7eae59e55234b069a2831a6a9ab98f8a0be451db47223a5bc648f54b67e9e1317dc1fbeda3d6bcd633e94e5aeea`} height="300" width="800" frameBorder="0" allowfullscreen></iframe>
+                  <iframe key={beat.id} src={`https://flat.io/embed/${beat.embedSrc}?zoom=-6`} height="400" width="100%" frameBorder="0" allowFullScreen allow="midi"></iframe>
                 </div>
+
                 <Button variant="warning">Add to Practice Schedule</Button>
               </div>
 
@@ -51,15 +62,16 @@ const Exercises = () => {
 
             return ( 
 
-              <div className='row my-3'>
+              <div className='row my-3' key={fill.id} >
                 <div>
                   <h5>{fill.title}</h5>
                   <p>Difficulty: {fill.difficulty}</p>
                 </div>
-                <div>
 
-                  <iframe key={fill.id} src={`https://flat.io/embed/${fill.embedSrc}?_l=true&sharingKey=34ed5ad07b12e688737a9fc3d87d4d20030ea7eae59e55234b069a2831a6a9ab98f8a0be451db47223a5bc648f54b67e9e1317dc1fbeda3d6bcd633e94e5aeea`} height="300" width="800" frameBorder="0" allowfullscreen></iframe>
+                <div>
+                  <iframe key={fill.id} src={`https://flat.io/embed/${fill.embedSrc}??zoom=-6`} height="300" width="100%" frameBorder="0" allowFullScreen></iframe>
                 </div>
+
                 <Button variant="warning">Add to Practice Schedule</Button>
               </div>
 
