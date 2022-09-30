@@ -1,18 +1,31 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
 import PracticeSchedule from './PracticeSchedule'
+import {useNavigate} from 'react-router-dom'
+import {useSelector, useDispatch} from 'react-redux'
+
 import beatData from '../assets/beatData'
 import fillData from '../assets/fillData'
-import {useNavigate} from 'react-router-dom'
+import { loadBeats, loadFills } from '../actions/actions';
 
 const Exercises = () => {
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(loadBeats(beatData))
+    dispatch(loadFills(fillData))
+  }, [])
+  
+
   const handleClick = (id) => {
     
     // console.log(id)
     navigate(`/exercises/${id}`)
   }
+
+  
 
   return (
     <>
@@ -43,7 +56,7 @@ const Exercises = () => {
                 </div>
 
                 <div className='mb-1'>
-                  <iframe key={beat.id} src={`https://flat.io/embed/${beat.embedSrc}?zoom=-6`} height="400" width="100%" frameBorder="0" allowFullScreen allow="midi"></iframe>
+                  <iframe key={beat.id} src={`https://flat.io/embed/${beat.embedSrc}?zoom=-6`} height="300" width="100%" frameBorder="0" allowFullScreen allow="midi"></iframe>
                 </div>
 
                 <Button variant="warning">Add to Practice Schedule</Button>
@@ -62,7 +75,7 @@ const Exercises = () => {
 
             return ( 
 
-              <div className='row my-3' key={fill.id} >
+              <div onClick={()=>handleClick(fill.id)} className='row my-3' key={fill.id} >
                 <div>
                   <h5>{fill.title}</h5>
                   <p>Difficulty: {fill.difficulty}</p>

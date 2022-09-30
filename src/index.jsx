@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+import reducer from './reducers/reducer'
+
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,22 +15,24 @@ import Exercises from './components/Exercises';
 import PracticeSchedule from './components/PracticeSchedule';
 import ExerciseDetails from './components/ExerciseDetails';
 
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <React.StrictMode>
-    <Router>
-      <BaseLayout>
-        <Routes>
+    <Provider store={store}>
+      <Router>
+        <BaseLayout>
+          <Routes>
 
-          <Route path="/" element={<App />}/>
-          <Route path="/exercises" element={<Exercises />}/>
-          <Route path="/exercises/:exerciseID" element={<ExerciseDetails />}/>
-          <Route path="/practiceSchedule" element={<PracticeSchedule />}/>
+            <Route path="/" element={<App />}/>
+            <Route path="/exercises" element={<Exercises />}/>
+            <Route path="/exercises/:exerciseID" element={<ExerciseDetails />}/>
+            <Route path="/practiceSchedule" element={<PracticeSchedule />}/>
 
-        </Routes>
-      </BaseLayout>
-    </Router>
-  </React.StrictMode>
+          </Routes>
+        </BaseLayout>
+      </Router>
+    </Provider>
 );
 

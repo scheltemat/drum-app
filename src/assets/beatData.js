@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 let beats = [
   {
     id: uuidv4(),
-    title: "Basic eighth note beat",
+    title: "Basic Eighth Note Drum Beat",
     embedSrc: "633471d7a8aa160013ed45f0",
     difficulty: "Easy",
     description: "This is where everyone begins, the most basic of all drum beats. The way I like to teach a complete beginner how to play this is to tell them to count '1, 2, 3, 4' on a loop without stopping. Every time you say a number (which is every word you say) you will play a right hand on the hi hat. Every time you say '1', you will play a bass drum with your right foot. And every time you say '3', you will play a snare drum with your left hand. It's as simple as that, playing your first drum beat with just a little time... and maybe a little math too."
@@ -24,7 +24,7 @@ let beats = [
   },
   {
     id: uuidv4(),
-    title: "Inverted Paradiddle DnB Beat",
+    title: "Inverted Paradiddle Beat",
     embedSrc: "6334d191f8f23c0012ffd3ea",
     difficulty: "Hard",
     description: "This is (in my opinion) the quintessential Drum n Bass drum beat. At heart, it's kind of a modified paradiddle beat, one inverted paradiddle (RLLR) and one regular (LRLL), except it's more like (LKLL) where the right hand is replaced by a bass drum. It may seem stressful at first, but the pattern is only 2 counts long, so it will repeat 2x in a measure of 4/4. Start by learning the first 2 counts with good dynamics (SLOWLY), speed will come with time."
@@ -38,7 +38,7 @@ let beats = [
   },
   {
     id: uuidv4(),
-    title: "My first double bass beat",
+    title: "My First Double Bass Beat",
     embedSrc: "6334c8e587f303001264ea91",
     difficulty: "Easy",
     description: "If you have a double pedal, awesome! If you don't, then you can go ahead and skip this one. For those still here, this is the most basic double pedal drum beat there is. You will play the bass drum as RLRL etc. with your feet (assuming you're a right-handed drumset player). That means your right foot will always align with your right hand on the hi hat, so coordination-wise, it's not bad at all. The real challenge? Getting it faster."
@@ -52,7 +52,7 @@ let beats = [
   },
   {
     id: uuidv4(),
-    title: "Bleed by Meshuggah",
+    title: "Bleed by Meshuggah Intro Beat",
     embedSrc: "6334ca0bf8f23c0012ff7293",
     difficulty: "Extreme",
     description: "Single pedal players, leave now. This one is truly a test of coordination and endurance. The pattern? Simple. The execution? Gnarly. Start by learning the 'Herta' pattern (google it), then play that pattern with your feet. That's all this is, repeating 32nd/16th note 'Hertas' with your feet over an 1/8th note cymbal and backbeat pattern. Truthfully, this goes on for longer than just 3 measures, a lot longer, but this will give you the basic idea for the beginning of the song. The pattern repeats every 3 measures which does not line up nicely in 8 or 16 measure phrases, just one of the many reasons this song is cool."
