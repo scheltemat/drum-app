@@ -26,19 +26,25 @@ const ExerciseDetails = () => {
             return fill.id === exerciseID 
         })
 
+        // console.log(beatArr[0]);
+
         setDetails(beatArr[0] || fillArr[0])
+
+        // console.log(details);
         getVideos()
 
     }, [])
+    
 
     const getVideos = async () => {
 
+        console.log(details)
+
         let replacedTitle = details.title == undefined ? '' : details.title.replace(/\s/g, '%20')
 
-        let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=music&key=AIzaSyBOuh5X0NbNoMD-3rsFltkNnwSLbl-dvZ4`)
+        let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=AIzaSyBOuh5X0NbNoMD-3rsFltkNnwSLbl-dvZ4`)
 
         let data = await results.json();
-
         console.log(data)
     }
     
