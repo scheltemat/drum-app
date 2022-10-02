@@ -20,3 +20,10 @@ export const addToPractice = (item) => {
         product: item
     }
 }
+export const deletePracticeItem = (id) => {
+    
+    return {
+        type: "DELETE_PRACTICE_ITEM",
+        product: id
+    }
+}
