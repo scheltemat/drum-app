@@ -1,5 +1,8 @@
 # OnBeat Drum App
 
+![Screenshot](demo.png)
+
+[View Website](https://drive.google.com/file/d/1BPnQKar0nPot_Hsd5yfDvGYckuqWlVq7/view?usp=sharing)
 ### Overview
 * The idea behind this project was to create an application for drummers to practice, and potentially learn new ideas. There is an exercises page with 15 musical exercises, an individual exercise page that expands on a particular musical exercise and populates related YouTube videos, and a shopping-cart-like page where exercises of choice can be added from either the full exercises page, or from the individual exercise pages. The musical difficulty for the exercise content ranges from complete beginner to advanced player concepts in order to be enjoyed by a larger audience.
 
@@ -11,6 +14,10 @@
 
 ### Stretch Goals Completed
 * Creating all of my own data, including sheet music
-* Embeding sheet music 
+* Embeding sheet music with playback feature instead of just using images of sheet music. If a change is made to the sheet music online, the webpage will also recieve that change
 * Formatting YouTube videos into an attractive bootstrap carousel
 * Showing YouTube videos on the practice schedule page, as it was very challenging to get the data formatted and in the correct places 
+
+### Future Stretch Goals
+* Enhanced design
+* Increasing the number of available API calls
