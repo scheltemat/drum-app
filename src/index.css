@@ -1,3 +1,17 @@
+
+
 #root{
   background: rgb(225, 225, 225);
+  height: 100vh;
+}
+
+
+.navbar-brand{
+  padding-left: 5%;
+}
+#navbar-links{
+  padding-left: 5%;
+}
+#navbar-toggle{
+  margin-right: 5%;
 }

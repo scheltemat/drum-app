@@ -11,8 +11,8 @@ import { addToPractice } from '../actions/actions';
 const ExerciseDetails = () => {
 
     
-    const [details, setDetails] = useState({})
-    const [data, setData] = useState([])
+    const [details, setDetails] = useState({}) // one sheet music obj
+    const [data, setData] = useState([]) // from youtube api
 
     const {exerciseID} = useParams()
     const dispatch = useDispatch()
@@ -50,7 +50,7 @@ const ExerciseDetails = () => {
 
         let replacedTitle = details.title == undefined ? '' : details.title.replace(/\s/g, '%20')
 
-        let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=AIzaSyBOuh5X0NbNoMD-3rsFltkNnwSLbl-dvZ4`)
+        let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=AIzaSyA-xyD6pLRs4PCj2ql_2sCPIxpO4eqXAHA`)
 
         let data = await results.json();
 
@@ -64,14 +64,15 @@ const ExerciseDetails = () => {
   return (
     <>
 
-    <div className='container-fluid mt-3'>
+    <div className='container-fluid mx-1 mt-3'>
+
       <div className='row px-3'>
-        <div className='col-3'>
+        <div className='col-lg-3 col-sm-12'>
           <h5>Practice Schedule</h5>
 
           <PracticeSchedule />
         </div>
-        <div className="col-9">
+        <div className="col-lg-9 col-sm-12">
 
             <div className="row mb-4">
 
@@ -102,8 +103,8 @@ const ExerciseDetails = () => {
                     <Carousel>
                         {data.map(video =>{
                             return(
-                                <Carousel.Item>
-                                    <iframe width="100%" height="415" src={`https://www.youtube.com/embed/${video.id.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <Carousel.Item key={video.id}>
+                                    <iframe width="100%" height="415" src={`https://www.youtube.com/embed/${video.id.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                                 </Carousel.Item>
                             )

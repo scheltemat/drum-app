@@ -7,11 +7,11 @@ function ColorSchemesExample() {
   return (
     <>
     <Navbar bg="dark" variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">Get More Good At Drums</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Brand href="#home" className='navbar-brand'>OnBeat: a Drummer's App</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" id='navbar-toggle' />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto" id="navbar-links">
+
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/exercises">Exercises</Nav.Link>
             <Nav.Link as={Link} to="/practice">Go To Practice</Nav.Link>
@@ -19,7 +19,6 @@ function ColorSchemesExample() {
             
           </Nav>
         </Navbar.Collapse>
-      </Container>
     </Navbar>
     </>
   );
