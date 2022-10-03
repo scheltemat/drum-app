@@ -32,7 +32,7 @@ const PracticeSchedule = () => {
                   </div>
                   <div className='col-2'>
 
-                    <button onClick={()=>dispatch(deletePracticeItem(item))} className='btn btn-danger'>x</button>
+                    <button onClick={()=>dispatch(deletePracticeItem(item))} className='btn btn-danger' id='delete-button'>x</button>
                   </div>
 
                 </div>

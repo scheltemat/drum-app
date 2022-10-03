@@ -14,7 +14,7 @@ function ColorSchemesExample() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/exercises">Exercises</Nav.Link>
-            <Nav.Link as={Link} to="/">Go To Practice</Nav.Link>
+            <Nav.Link as={Link} to="/practice">Go To Practice</Nav.Link>
             <Nav.Link as={Link} to="/">Learn More</Nav.Link>
             
           </Nav>

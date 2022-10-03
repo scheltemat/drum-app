@@ -12,8 +12,8 @@ import App from './App';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BaseLayout from './components/layout/BaseLayout';
 import Exercises from './components/Exercises';
-import PracticeSchedule from './components/PracticeSchedule';
 import ExerciseDetails from './components/ExerciseDetails';
+import practiceRoom from './components/practiceRoom';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
@@ -28,7 +28,7 @@ root.render(
             <Route path="/" element={<App />}/>
             <Route path="/exercises" element={<Exercises />}/>
             <Route path="/exercises/:exerciseID" element={<ExerciseDetails />}/>
-            <Route path="/practiceSchedule" element={<PracticeSchedule />}/>
+            <Route path="/practice" element={<practiceRoom />}/>
 
           </Routes>
         </BaseLayout>

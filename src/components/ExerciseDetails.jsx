@@ -37,13 +37,12 @@ const ExerciseDetails = () => {
     }, [])
 
     useEffect(() => {
-        if(details.title !== undefined){
+        if(details.title !== undefined){ // only loads data if data obj is not empty
 
             getVideos()
         }
 
     }, [details])
-    
 
     const getVideos = async () => {
 
@@ -51,13 +50,14 @@ const ExerciseDetails = () => {
 
         let replacedTitle = details.title == undefined ? '' : details.title.replace(/\s/g, '%20')
 
-        let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=AIzaSyDR5BIhHPtgYIaN0BKA6xuFfQoMx_OeJ28`)
+        let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=AIzaSyBOuh5X0NbNoMD-3rsFltkNnwSLbl-dvZ4`)
 
         let data = await results.json();
-        console.log(data)
-        console.log(data.items[0]);
 
-        setData(data.items)
+        console.log(data) // whole object from youtube api
+        console.log(data.items[0]); //array of video objects
+
+        setData(data.items) // putting data into state so the DOM can grab it
     }
     
 
@@ -65,13 +65,13 @@ const ExerciseDetails = () => {
     <>
 
     <div className='container-fluid mt-3'>
-      <div className='row'>
-        <div className='col-4'>
+      <div className='row px-3'>
+        <div className='col-3'>
           <h5>Practice Schedule</h5>
 
           <PracticeSchedule />
         </div>
-        <div className="col-8">
+        <div className="col-9">
 
             <div className="row mb-4">
 
@@ -97,13 +97,13 @@ const ExerciseDetails = () => {
 
             <div className='row'>
 
-                <div className="col-12">
+                <div className="col-12 mb-5">
             
                     <Carousel>
                         {data.map(video =>{
                             return(
                                 <Carousel.Item>
-                                    <iframe width="100%" height="315" src={`https://www.youtube.com/embed/${video.id.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="100%" height="415" src={`https://www.youtube.com/embed/${video.id.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                                 </Carousel.Item>
                             )

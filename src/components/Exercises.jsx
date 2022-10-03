@@ -28,15 +28,15 @@ const Exercises = () => {
 
   return (
     <>
-    <div className='container mx-1 mt-3'>
-      <div className='row'>
-        <div className='col-4'>
+    <div className='container-fluid mx-1 mt-3'>
+      <div className='row px-3'>
+        <div className='col-3'>
           <h5>Practice Schedule</h5>
 
           <PracticeSchedule />
         </div>
 
-        <div className="col-8 mt-0">
+        <div className="col-9 mt-0">
 
           <div>
 
