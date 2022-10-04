@@ -8,6 +8,7 @@
   width: 10px;
   height: 20px;
   display: flex;
+  font-size: small;
   justify-content: center;
   align-items: center;
   padding: auto;

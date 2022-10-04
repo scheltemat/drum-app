@@ -2,9 +2,9 @@
 
 ![Screenshot](demo.png)
 
-[View Website](https://drive.google.com/file/d/1BPnQKar0nPot_Hsd5yfDvGYckuqWlVq7/view?usp=sharing)
+[View Website](https://on-beat.netlify.app/)
 ### Overview
-* The idea behind this project was to create an application for drummers to practice, and potentially learn new ideas. There is an exercises page with 15 musical exercises, an individual exercise page that expands on a particular musical exercise and populates related YouTube videos, and a shopping-cart-like page where exercises of choice can be added from either the full exercises page, or from the individual exercise pages. The musical difficulty for the exercise content ranges from complete beginner to advanced player concepts in order to be enjoyed by a larger audience.
+* The idea behind this project was to create an application for drummers to practice, and potentially learn new ideas. There is an exercises page with 15 musical exercises, an individual exercise page that expands on a particular musical exercise and populates related YouTube videos. There is also a shopping-cart-like page where exercises of choice can be added from either the full exercises page, or from the individual exercise pages. The musical difficulty for the exercise content ranges from complete beginner to advanced player concepts in order to be enjoyed by a larger audience.
 
 ### MVP (Minimum Viable Product)
 * Create an app that displays readable sheet music

@@ -24,19 +24,19 @@ const PracticeRoom = () => {
 
   
   useEffect(() => {
-    // const checking = async () => {
+    const checking = async () => {
       
-    //   let videos = []
-    //   if(details.length > 0){ // only loads data if data obj is not empty
+      let videos = []
+      if(details.length > 0){ // only loads data if data obj is not empty
 
-    //       videos = await getVideos()
-    //       console.log(videos)
-    //   }
-    //   return videos
-    // }
-    // checking().then((result)=>{
-    //   setData(result)
-    // })
+          videos = await getVideos()
+          console.log(videos)
+      }
+      return videos
+    }
+    checking().then((result)=>{
+      setData(result)
+    })
 
   }, [details])
 
