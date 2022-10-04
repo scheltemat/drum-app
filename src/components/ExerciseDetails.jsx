@@ -8,6 +8,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import PracticeSchedule from './PracticeSchedule'
 import { addToPractice } from '../actions/actions';
 
+import {keys} from '../secret'
+
 const ExerciseDetails = () => {
 
     
@@ -50,7 +52,7 @@ const ExerciseDetails = () => {
 
         let replacedTitle = details.title == undefined ? '' : details.title.replace(/\s/g, '%20')
 
-        let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=AIzaSyA-xyD6pLRs4PCj2ql_2sCPIxpO4eqXAHA`)
+        let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=${keys.key1}`)
 
         let data = await results.json();
 

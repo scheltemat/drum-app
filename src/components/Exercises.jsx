@@ -42,7 +42,7 @@ const Exercises = () => {
           <div>
 
             <div className='row mt-3 '>
-              <h3>Drum Beats</h3>
+              <h2>Drum Beats</h2>
             </div>
 
             {beatData.map(beat =>{

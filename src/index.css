@@ -1,10 +1,52 @@
 
 
 #root{
-  background: rgb(225, 225, 225);
-  height: 100vh;
+  background-color: black;
+  color: white;
+}
+#practice-delete{
+  width: 10px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
 }
 
+#image-container{
+  position: relative;
+  text-align: center;
+  color: white
+}
+.hero-container{
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}
+.hero-container span{
+  color: white
+}
+
+@media (max-width: 800px) {
+  #home-page-info p{
+    font-size: small;
+  }
+  #home-page-info h4{
+    font-size: medium;
+  }
+}
+@media (max-width: 600px) {
+  #home-page-info p{
+    font-size: x-small;
+  }
+}
+
+.home-page-details{
+  text-align: center;
+}
 
 .navbar-brand{
   padding-left: 5%;

@@ -5,6 +5,8 @@ import { deletePracticeItem } from '../actions/actions';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 
+import {keys} from '../secret'
+
 const PracticeRoom = () => {
 
   const [details, setDetails] = useState([])
@@ -12,6 +14,7 @@ const PracticeRoom = () => {
 
   const dispatch = useDispatch()
   const practiceSchedule = useSelector(state => state.practiceSchedule)
+  const howManyThingsToPractice = useSelector(state => state.howManyThingsToPractice)
 
   useEffect(() => {
 
@@ -46,7 +49,7 @@ const PracticeRoom = () => {
 
       let replacedTitle = detailObj.title == undefined ? '' : detailObj.title.replace(/\s/g, '%20')
 
-      let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=AIzaSyA-xyD6pLRs4PCj2ql_2sCPIxpO4eqXAHA`)
+      let results = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=5&q=${replacedTitle}&topicId=drums&categoryId=music&key=${keys.key1}`)
 
       let data = await results.json();
 
@@ -64,6 +67,12 @@ const PracticeRoom = () => {
       <div className='container-fluid mx-1 mt-3'>
 
         <h2>Your Practice Schedule</h2>
+
+        {
+        practiceSchedule.length === 0 ? 
+        <div>...is empty</div> : 
+        <div></div>
+        }
 
         {practiceSchedule.map((item, index) =>{
           return (

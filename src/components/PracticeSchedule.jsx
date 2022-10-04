@@ -17,7 +17,7 @@ const PracticeSchedule = () => {
       <div>Your Schedule is empty</div>
       :
       <div>
-        You have <strong>{practiceSchedule.length}</strong> {practiceSchedule.length > 1 ? "items to practice" : "item to practice"} 
+        You have <strong>{practiceSchedule.length}</strong> {practiceSchedule.length > 1 || practiceSchedule.length === 0 ? "items to practice" : "item to practice"} 
         <br />
       </div>
       }
@@ -26,13 +26,13 @@ const PracticeSchedule = () => {
           practiceSchedule.map(item =>{
             return (
               <div key={item.id} className="col-12 d-flex flex-column">
-                <div className="row">
+                <div className="row mb-1">
                   <div className="col-10">
                     <em>{item.title}</em> &nbsp;
                   </div>
                   <div className='col-2'>
 
-                    <button onClick={()=>dispatch(deletePracticeItem(item))} className='btn btn-danger' id='delete-button'>x</button>
+                    <button id="practice-delete" onClick={()=>dispatch(deletePracticeItem(item))} className='btn btn-danger' >x</button>
                   </div>
 
                 </div>
