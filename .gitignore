@@ -24,4 +24,4 @@ yarn-error.log*
 
 
 # api keys
-secret.js
+/src/secret.js
