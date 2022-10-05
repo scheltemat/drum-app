@@ -25,3 +25,5 @@ yarn-error.log*
 
 # api keys
 /src/secret.js
+# Local Netlify folder
+.netlify
