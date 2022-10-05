@@ -49,6 +49,12 @@
   text-align: center;
 }
 
+@media (max-width: 700px) {
+  iframe{
+    height: 200px;
+  }
+}
+
 .navbar-brand{
   padding-left: 5%;
 }

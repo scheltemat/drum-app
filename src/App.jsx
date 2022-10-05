@@ -38,7 +38,7 @@ const App = () => {
         </div>
       </div>
       <div className="row d-flex justify-content-evenly pt-3">
-        <div className="col-3 px-4" id='home-page-info'>
+        <div className="col-3" id='home-page-info'>
           <div className='home-page-details'>
             <div className='mb-4'>
               <BsMusicNoteBeamed style={{fontSize: '70px'}}/>
@@ -47,7 +47,7 @@ const App = () => {
             <p>Look through our list of exercises, ranging in skill from beginner to the advanced player</p>
           </div>
         </div>
-        <div className="col-3 px-4" id='home-page-info'>
+        <div className="col-3" id='home-page-info'>
           <div className='home-page-details'>
             <div className='mb-4'>
               <GiMusicalScore style={{fontSize: '70px'}}/>
@@ -56,7 +56,7 @@ const App = () => {
             <p>Click on any exercise to get more details, including YouTube videos to help your learning process.</p>
           </div>
         </div>
-        <div className="col-3 px-4" id='home-page-info'>
+        <div className="col-3" id='home-page-info'>
           <div className='home-page-details'>
             <div className='mb-4'>
               <SiYoutubemusic style={{fontSize: '70px'}}/>
